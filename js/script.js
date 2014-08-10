@@ -8,11 +8,13 @@ var win = gui.Window.get();
 //win.y = 50;
 
 function switchWindow() {
-    if (windowIsShow)
+    if (windowIsShow) {
         win.hide();
-    else {
+        windowIsShow = false;
+    } else {
         win.show();
         win.focus();
+        windowIsShow = true;
     }
 }
 
@@ -83,7 +85,7 @@ $(document).ready(function() {
                 clipboard.set(emotionContent, 'text');
                 $(".border_frame").mouseover();
                 //narrowingWindow();
-                win.hide();
+                switchWindow();
             });
 
         });
