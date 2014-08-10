@@ -1,0 +1,197 @@
+/* 
+    Document   : style
+    Created on : 01-May-2013, 15:49:52
+    Author     : losses
+    Description:
+        Style of emoji!
+*/
+
+*{
+    margin:0;
+    padding:0;
+}
+input,button,select,textarea{
+    outline:none
+}
+img{
+    margin:0;
+    padding:0;
+    -webkit-app-region: no-drag;
+}
+body{
+    width:100%;
+    height:100%;
+    font-family:"microsoft yahei";
+    overflow:hidden;
+}
+footer{
+    bottom:0;
+    width:340px;
+    height:40px;
+    background:url('../images/header.png');
+    position:fixed;
+    -webkit-app-region: drag;
+}
+#emotion_box{
+    margin:5px;
+}
+.emotion{
+    background:#f084a0;
+    font-size:11px;
+    border:0;
+    border-radius:5px;
+    display:inline-block;
+    margin:2px;
+    padding:2px 3px;
+    color:white;
+}
+.emotion:hover{
+    box-shadow:0 0 9px rgba(255,255,255,0.6) inset;
+}
+#quit{
+    width:21px;
+    height:21px;
+    float:right;
+    margin:10px 15px 10px 0;
+    //position:relative;
+    //z-index:9999;
+}
+
+/*程序小图标*/
+#program_icon{
+    left:0;
+    top:0;
+    width:138px;
+    height:39px;
+    background:#73c5c9;
+    position:fixed;
+    -webkit-app-region: drag;
+}
+
+#program_icon>b{
+    top:7px;
+    left:7px;
+    width:27px;
+    height:27px;
+    background:#fcc325;
+    border-radius:50%;
+    position:absolute;
+    display:block;
+    -webkit-app-region: no-drag;
+}
+
+#program_icon>b>i{
+    top:-7px;
+    left:8px;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:white;
+    display:inline-block;
+    position:relative;
+    -webkit-app-region: drag;
+}
+
+#program_icon>a{
+    top:0;
+    left:39px;
+    width:99px;
+    height:39px;
+    background:white;
+    font-weight:normal;
+    display:inline-block;
+    position:fixed;
+}
+/*程序外周边框*/
+#frame>s{
+    position:fixed;
+}
+#frame>s:nth-child(1),
+#frame>s:nth-child(3){
+    height:2px;
+    width:100%;
+}
+
+#frame>s:nth-child(2),
+#frame>s:nth-child(4){
+    height:100%;
+    width:2px;
+}
+#frame>s:nth-child(1){
+    top:0;
+}
+#frame>s:nth-child(2){
+    top:0;
+    right:0;
+}
+#frame>s:nth-child(3){
+    bottom:0;
+}
+#frame>s:nth-child(4){
+    top:0;
+    left:0;
+}
+/*关于页面*/
+#icon{
+    width:100px;
+    margin:0 auto;
+}
+#icon img{
+    width:100px;
+    height:100px;
+}
+h1{
+    font-size:20px;
+    display:block;
+    text-align:center;
+}
+#description{
+    color:#5c5c5c;
+    font-size:10px;
+    display:block;
+    text-align:center;
+}
+#developer{
+    margin-top:30px;
+}
+.avatar{
+    width:80px;
+    height:80px;
+    display: block;
+    border-radius:100px;
+    overflow: hidden;
+    float:left;
+}
+.avatar img{
+    width:80px;
+    height:80px;
+}
+.information{
+    float:left;
+    margin:0 20px;
+}
+.information a{
+    display:block;
+}
+.name{
+    font-weight:bolder;
+    font-size:15px;
+    text-align:left;
+}
+.work{
+    font-size:11px;
+    color:#5c5c5c;
+}
+.Email{
+    font-size:12px;
+}
+.website{
+    font-size:12px;
+}
+.clear{
+    clear:both;
+}
+.namecard{
+    width:300px;
+    margin:20px auto;
+}

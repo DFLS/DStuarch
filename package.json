@@ -1,0 +1,19 @@
+{
+    "main": "index.html",
+    "name": "DSturach",
+    "description": "Emotion input tool.",
+    "version": "0.1.0",
+    "keywords": ["demo", "node-webkit", "emotion"],
+    "window": {
+        "icon": "icon.ico",
+        "toolbar": false,
+        "width": 138,
+        "height": 39,
+        "resizable": false,
+        "frame": false,
+        "always-on-top": true
+    },
+    "webkit": {
+        "plugin": false
+    }
+}

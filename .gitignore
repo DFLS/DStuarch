@@ -36,7 +36,8 @@ node_modules
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -45,6 +46,11 @@ Icon
 .Spotlight-V100
 .Trashes
 
+#Netbeans
+nbproject
+
+#Runfile
+run.cmd
 # Windows
 # =========================
 
@@ -63,3 +69,5 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+/nbproject/private/
+/Emoji/nbproject/private/
