@@ -31,7 +31,8 @@ $(document).ready(function() {
             $(".emotion").on("click", function() {
                 var emotionContent = $(this).html();
                 clipboard.set(emotionContent, 'text');
-                narrowingWindow();
+                $(".border_frame").mouseover();
+                //narrowingWindow();
             });
 
         });
