@@ -7,8 +7,8 @@
     "window": {
         "icon": "icon.ico",
         "toolbar": false,
-        "width": 138,
-        "height": 39,
+        "width": 340,
+        "height": 420,
         "resizable": false,
         "frame": false,
         "always-on-top": true,

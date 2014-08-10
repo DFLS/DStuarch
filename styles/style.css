@@ -71,6 +71,7 @@ footer{
     background:#73c5c9;
     position:fixed;
     -webkit-app-region: drag;
+    display:none;
 }
 
 #program_icon>b{

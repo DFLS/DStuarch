@@ -2,8 +2,8 @@ var gui = require('nw.gui');
 var clipboard = gui.Clipboard.get();
 var win = gui.Window.get();
 
-win.x = screen.width - 200;
-win.y = 50;
+//win.x = screen.width - 200;
+//win.y = 50;
 
 function enlargeWindow() {
     $("#program_icon").hide();
@@ -21,6 +21,27 @@ function narrowingWindow() {
 
 $(document).ready(function() {
 
+    var option = {
+        key: "Alt+Q",
+        active: function() {
+            console.log("Global desktop keyboard shortcut: " + this.key + " active.");
+        },
+        failed: function(msg) {
+            console.log(msg);
+        }
+    };
+
+    var shortcut = new gui.Shortcut(option);
+
+    gui.App.registerGlobalHotKey(shortcut);
+
+    shortcut.on('active', function() {
+        win.show();
+        win.focus();
+    });
+
+
+
     $.getJSON("list.json", function(data) {
         $.each(data.emotions, function(i, item) {
             $("#emotion_box").append(
@@ -33,18 +54,19 @@ $(document).ready(function() {
                 clipboard.set(emotionContent, 'text');
                 $(".border_frame").mouseover();
                 //narrowingWindow();
+                win.hide();
             });
 
         });
     });
 
-    $("#elf").on("mouseenter", function() {
-        enlargeWindow();
-    });
+//    $("#elf").on("mouseenter", function() {
+//        enlargeWindow();
+//    });
 
-    $(".border_frame").on("mouseover", function() {
-        if (win.width >= 140)
-            narrowingWindow();
-    });
+//    $(".border_frame").on("mouseover", function() {
+//        if (win.width >= 140)
+//            narrowingWindow();
+//    });
 
 });
