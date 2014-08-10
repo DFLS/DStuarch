@@ -23,6 +23,7 @@ body{
     height:100%;
     font-family:"microsoft yahei";
     overflow:hidden;
+    -webkit-user-select: none;
 }
 footer{
     bottom:0;
@@ -69,8 +70,8 @@ footer{
 }
 
 #program_icon>b{
-    top:7px;
-    left:7px;
+    top:6px;
+    left:105px;
     width:27px;
     height:27px;
     background:#fcc325;
@@ -94,7 +95,7 @@ footer{
 
 #program_icon>a{
     top:0;
-    left:39px;
+    left:0;
     width:99px;
     height:39px;
     background:white;
@@ -104,32 +105,34 @@ footer{
 }
 /*程序外周边框*/
 #frame>s{
-    position:fixed;
+    display:block;
+    position:absolute;
+    -webkit-app-region: no-drag;
 }
 #frame>s:nth-child(1),
 #frame>s:nth-child(3){
-    height:2px;
+    height:3px;
     width:100%;
 }
 
 #frame>s:nth-child(2),
 #frame>s:nth-child(4){
     height:100%;
-    width:2px;
+    width:3px;
 }
 #frame>s:nth-child(1){
-    top:0;
+    top:8px;
 }
 #frame>s:nth-child(2){
     top:0;
-    right:0;
+    right:8px;
 }
 #frame>s:nth-child(3){
-    bottom:0;
+    bottom:8px;
 }
 #frame>s:nth-child(4){
     top:0;
-    left:0;
+    left:8px;
 }
 /*关于页面*/
 #icon{

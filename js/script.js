@@ -41,7 +41,9 @@ $(document).ready(function() {
         enlargeWindow();
     });
 
-    $("s").on("mouseover", function() {
-        //narrowingWindow();
+    $(".border_frame").on("mouseover", function() {
+        if (win.width >= 140)
+            narrowingWindow();
     });
+
 });
