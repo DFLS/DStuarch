@@ -16,7 +16,11 @@ input,button,select,textarea{
 img{
     margin:0;
     padding:0;
+    transition: all 0.4s ease-in-out;
     -webkit-app-region: no-drag;
+}
+img:hover{
+    -webkit-transform: rotate(180deg);
 }
 body{
     width:100%;
@@ -98,8 +102,10 @@ footer{
     left:0;
     width:99px;
     height:39px;
-    background:white;
-    font-weight:normal;
+    background:#f189a4;
+    color:white;
+    text-align:center;
+    font:16px/39px "microsoft yahei",sans-serif;
     display:inline-block;
     position:fixed;
 }
