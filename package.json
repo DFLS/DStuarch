@@ -2,7 +2,7 @@
     "main": "index.html",
     "name": "DSturach",
     "description": "Emotion input tool.",
-    "version": "0.0.0.4 PreAlpha",
+    "version": "0.0.0.5 Pre Alpha",
     "keywords": ["demo", "node-webkit", "emotion"],
     "window": {
         "icon": "icon.ico",
