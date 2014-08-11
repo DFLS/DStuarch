@@ -69,5 +69,10 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+#Netbeans Project File
 /nbproject/private/
-/Emoji/nbproject/private/
+
+#Package File
+DStuarch.7z
+DStuarch.zip
