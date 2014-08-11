@@ -85,7 +85,8 @@ $(document).ready(function() {
                 clipboard.set(emotionContent, 'text');
                 $(".border_frame").mouseover();
                 //narrowingWindow();
-                switchWindow();
+                win.hide();
+                windowIsShow = false;
             });
 
         });
