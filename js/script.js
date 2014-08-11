@@ -81,7 +81,7 @@ $(document).ready(function() {
 
             //绑定内容
             $(".emotion").on("click", function() {
-                var emotionContent = $(this).html();
+                var emotionContent = $(this).text();
                 clipboard.set(emotionContent, 'text');
                 $(".border_frame").mouseover();
                 //narrowingWindow();
