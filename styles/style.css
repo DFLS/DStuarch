@@ -49,9 +49,13 @@ footer{
     margin:2px;
     padding:2px 3px;
     color:white;
+    transition: all 0.15s ease-in-out;
 }
 .emotion:hover{
-    box-shadow:0 0 9px rgba(255,255,255,0.6) inset;
+    background:#f26d90;
+}
+.emotion:active{
+    background:#eb74af;
 }
 #quit{
     width:21px;
