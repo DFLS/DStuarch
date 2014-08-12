@@ -15,8 +15,6 @@ var parase = {
         $(".emotion").on("click", function() {
             var emotionContent = $(this).text();
             clipboard.set(emotionContent, 'text');
-            $(".border_frame").mouseover();
-            //narrowingWindow();
             win.hide();
             windowIsShow = false;
         });

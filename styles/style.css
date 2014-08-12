@@ -66,54 +66,6 @@ footer{
     //z-index:9999;
 }
 
-/*程序小图标*/
-#program_icon{
-    left:0;
-    top:0;
-    width:138px;
-    height:39px;
-    background:#73c5c9;
-    position:fixed;
-    -webkit-app-region: drag;
-    display:none;
-}
-
-#program_icon>b{
-    top:6px;
-    left:105px;
-    width:27px;
-    height:27px;
-    background:#fcc325;
-    border-radius:50%;
-    position:absolute;
-    display:block;
-    -webkit-app-region: no-drag;
-}
-
-#program_icon>b>i{
-    top:-7px;
-    left:8px;
-    width:3px;
-    height:3px;
-    border-radius:50%;
-    background:white;
-    display:inline-block;
-    position:relative;
-    -webkit-app-region: drag;
-}
-
-#program_icon>a{
-    top:0;
-    left:0;
-    width:99px;
-    height:39px;
-    background:#f189a4;
-    color:white;
-    text-align:center;
-    font:16px/39px "microsoft yahei",sans-serif;
-    display:inline-block;
-    position:fixed;
-}
 /*程序外周边框*/
 #frame>s{
     display:block;

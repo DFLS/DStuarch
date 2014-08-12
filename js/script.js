@@ -3,8 +3,6 @@ var gui = require('nw.gui');
 var clipboard = gui.Clipboard.get();
 var win = gui.Window.get();
 var emotionData;
-//win.x = screen.width - 200;
-//win.y = 50;
 
 function switchWindow() {
     if (windowIsShow) {
@@ -15,20 +13,6 @@ function switchWindow() {
         win.focus();
         windowIsShow = true;
     }
-}
-
-function enlargeWindow() {
-    $("#program_icon").hide();
-    win.x = win.x - 138;
-    win.width = 340;
-    win.height = 420;
-}
-
-function narrowingWindow() {
-    $("#program_icon").show();
-    win.x = win.x + 138;
-    win.width = 138;
-    win.height = 39;
 }
 
 //注册快捷键
@@ -72,19 +56,4 @@ $.getJSON("list.json", function(data) {
     $(document).ready(function() {
         parase.writeEmotions('useful');
     });
-});
-
-$(document).ready(function() {
-
-    //parase.writeEmotions('useful');
-
-//    $("#elf").on("mouseenter", function() {
-//        enlargeWindow();
-//    });
-
-//    $(".border_frame").on("mouseover", function() {
-//        if (win.width >= 140)
-//            narrowingWindow();
-//    });
-
 });
