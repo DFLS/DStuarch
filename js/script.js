@@ -1,9 +1,8 @@
 var windowIsShow = true;
-
 var gui = require('nw.gui');
 var clipboard = gui.Clipboard.get();
 var win = gui.Window.get();
-
+var emotionData;
 //win.x = screen.width - 200;
 //win.y = 50;
 
@@ -42,11 +41,8 @@ var option = {
         console.log(msg);
     }
 };
-
 var shortcut = new gui.Shortcut(option);
-
 gui.App.registerGlobalHotKey(shortcut);
-
 shortcut.on('active', function() {
     switchWindow();
 });
@@ -60,37 +56,27 @@ menu.append(new gui.MenuItem({
         return win.close();
     }
 }));
-
 var tray = new gui.Tray({
     title: 'DStuarch',
-    tooltip: '打开DStuarch',
+    tooltip: 'Open DStuarch',
     icon: './images/tray.png',
     menu: menu
 });
-
 tray.on('click', function() {
     switchWindow();
 });
 
-$(document).ready(function() {
-    $.getJSON("list.json", function(data) {
-        $.each(data.emotions, function(i, item) {
-            $("#emotion_box").append(
-                    "<button class=\"emotion\">" + item.content + "</button>"
-                    );
-
-            //绑定内容
-            $(".emotion").on("click", function() {
-                var emotionContent = $(this).text();
-                clipboard.set(emotionContent, 'text');
-                $(".border_frame").mouseover();
-                //narrowingWindow();
-                win.hide();
-                windowIsShow = false;
-            });
-
-        });
+//ajax 加载颜文字文件
+$.getJSON("list.json", function(data) {
+    emotionData = data;
+    $(document).ready(function() {
+        parase.writeEmotions('useful');
     });
+});
+
+$(document).ready(function() {
+
+    //parase.writeEmotions('useful');
 
 //    $("#elf").on("mouseenter", function() {
 //        enlargeWindow();
