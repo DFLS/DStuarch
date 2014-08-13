@@ -120,6 +120,7 @@ nav>ul>li{
     border:2px solid transparent;
     border-radius:50%;
     display:inline-block;
+    -webkit-user-select: none;
 }
 
 nav>ul>li.selected,
