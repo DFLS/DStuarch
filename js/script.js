@@ -57,3 +57,21 @@ $.getJSON("list.json", function(data) {
         parase.writeEmotions('useful');
     });
 });
+
+
+$(document).ready(function() {
+    var xPosition = -50;
+    var hueDegree = 0;
+    $("nav>ul>li").each(function() {
+        $(this).css("-webkit-filter", "hue-rotate(" + hueDegree + "deg)");
+        $(this).css("background-position-x", xPosition);
+        hueDegree += 60;
+        xPosition = xPosition - 38;
+    });
+
+    $("nav>ul>li").on("click", function() {
+        var hueDegree = $("nav").find("li").index($(this)) * 60;
+        parase.writeEmotions($(this).attr("groupID"));
+        $("button,footer").css("-webkit-filter", "hue-rotate(" + hueDegree + "deg)");
+    });
+});

@@ -33,7 +33,7 @@ footer{
     bottom:0;
     width:340px;
     height:40px;
-    background:url('../images/header.png');
+    background-image:url('../images/header.png');
     position:fixed;
     -webkit-app-region: drag;
 }
@@ -96,6 +96,36 @@ footer{
 #frame>s:nth-child(4){
     top:0;
     left:8px;
+}
+
+/*底部导航栏*/
+nav{
+    display:inline-block;
+    position:absolute;
+    bottom:2px;
+    left:0;
+}
+
+nav>ul{
+    margin:6px 0 0 5px;
+    display:inline-block;
+}
+
+nav>ul>li{
+    width:24px;
+    height:24px;
+    margin:0 5px;
+    background:url('../images/header.png') no-repeat;
+    background-position-y: -8px;
+    border:2px solid transparent;
+    border-radius:50%;
+    display:inline-block;
+}
+
+nav>ul>li.selected,
+nav>ul>li:hover{
+    border-color:white;
+    box-shadow:0 0 5px rgba(0,0,0,0.5);
 }
 /*关于页面*/
 #icon{
