@@ -1,5 +1,5 @@
 {
-    "emotions":
+    "useful":
             [
                 {
                     "content": "(∫・ω・)∫"
@@ -163,6 +163,187 @@
                 {
                     "content": "٩(ŏ﹏ŏ、)۶"
                 }
-
+            ],
+    "sad":
+            [
+                {
+                    "content": "→_→"
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                }
+            ],
+    "abnormal":
+            [
+                {
+                    "content": "(눈_눈)"
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                }
+            ],
+    "strange":
+            [
+                {
+                    "content": "(°ㅂ°)"
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                }
+            ],
+    "sad":
+            [
+                {
+                    "content": "→_→"
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                }
+            ],
+    "long":
+            [
+                {
+                    "content": "　∧＿∧\r\n（〃｀д´ )∧∧\r\n〃/　＼) (   ´ｪ`)\r\n((　（(　⌒つつ\r\n　Ｕ`＼)Ｊ´﻿",
+                    "name": "fubuki",
+                    "revert": true
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                },
+                {
+                    "content": ""
+                }
             ]
 }
