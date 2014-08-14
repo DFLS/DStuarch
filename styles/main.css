@@ -145,12 +145,12 @@ nav>ul>li>div.selected{
 }
 .emotion{
     background:#f084a0;
-    font-size:11px;
+    font:12px/18px "microsoft yahei";
     border:0;
     border-radius:5px;
     display:inline-block;
     margin:2px;
-    padding:2px 3px;
+    padding:2px 8px;
     color:white;
     transition: all 0.15s ease-in-out;
 }
