@@ -60,18 +60,28 @@ $.getJSON("list.json", function(data) {
 
 
 $(document).ready(function() {
-    var xPosition = -50;
-    var hueDegree = 0;
     $("nav>ul>li").each(function() {
-        $(this).css("-webkit-filter", "hue-rotate(" + hueDegree + "deg)");
-        $(this).css("background-position-x", xPosition);
-        hueDegree += 60;
-        xPosition = xPosition - 38;
+        $(this).html('<div>' + $(this).attr("groupID") + '</div>');
     });
 
-    $("nav>ul>li").on("click", function() {
-        var hueDegree = $("nav").find("li").index($(this)) * 60;
-        parase.writeEmotions($(this).attr("groupID"));
-        $("button,footer").css("-webkit-filter", "hue-rotate(" + hueDegree + "deg)");
+    $("nav>ul>li").on({
+        click: function() {
+            $("nav>ul>li").each(function() {
+                $(this).removeClass("selected");
+            });
+            $(this).addClass("selected");
+            var hueDegree = $("nav").find("li").index($(this)) * 60;
+            parase.writeEmotions($(this).attr("groupID"));
+            $("button,footer").css("-webkit-filter", "hue-rotate(" + hueDegree + "deg)");
+        },
+        mouseenter: function() {
+            $(this).addClass("selected");
+            $(this).children("div").addClass("selected");
+        },
+        mouseleave: function() {
+            $(this).removeClass("selected");
+            $(this).children("div").removeClass("selected");
+        }
     });
+    $("nav>ul>li").removeClass("selected");
 });

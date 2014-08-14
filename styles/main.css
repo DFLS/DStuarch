@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+input,button,select,textarea{
+    outline:none
+}
+
+body{
+    width:340px;
+    height:420px;
+    font-family:"microsoft yahei";
+    overflow:hidden;
+    -webkit-user-select: none;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//窗体样式
+////////////////////////////////////////////////////////////////////////////////
+
+header{
+    left:0;
+    bottom:0;
+    width:100%;
+    height:30px;
+    background:rgba(18,216,153,0.8);
+    box-shadow:0 -3px 3px rgba(18,216,153,0.2);
+    position:absolute;
+}
+
+header{
+    left:0;
+    bottom:0;
+    width:100%;
+    height:30px;
+    background:url(../images/logo.png) rgba(18,216,153,0.8) no-repeat;
+    background-size: 30px;
+    box-shadow:0 -3px 3px rgba(18,216,153,0.2);
+    position:absolute;
+}
+
+#close{
+    top:6px;
+    right:10px;
+    margin:0;
+    padding:0;
+    display:block;
+    position:absolute;
+    transition: all 0.4s ease-in-out;
+    -webkit-app-region: no-drag;
+}
+
+#close:hover{
+    -webkit-transform: rotate(180deg);
+}
+
+/*导航栏*/
+nav{
+    left:0;
+    bottom:0;
+    width:0;
+    height:30px;
+    padding-left:30px;
+    overflow: hidden;
+    display:inline-block;
+    position:absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+nav:hover{
+    width:100%;
+}
+
+.selected,
+nav>*{
+    transition: all 0.1s ease-in-out;
+}
+
+nav>ul{
+    font-size:0;
+    display:inline-block;
+}
+
+nav>ul>li{
+    width:20px;
+    height:30px;
+    color:white;
+    font:12px/30px "microsoft yahei",sans-serif;
+    display:inline-block;
+    -webkit-app-region: no-drag;
+}
+
+nav>ul>li.selected{
+    width:100px !important;
+}
+
+nav>ul>li:nth-of-type(1){
+    width:15px;
+    background:#12d899;
+}
+
+nav>ul>li:nth-of-type(2){
+    width:30px;
+    background:#ffa200;
+}
+
+nav>ul>li:nth-of-type(3){
+    width:20px;
+    background:#00baff;
+}
+
+nav>ul>li:nth-of-type(4){
+    width:10px;
+    background:#e6e300;
+}
+
+nav>ul>li:nth-of-type(5){
+    width:30px;
+    background:#9aea2c;
+}
+
+nav>ul>li:nth-of-type(6){
+    width:20px;
+    background:#fc1661;
+}
+
+nav>ul>li>div{
+    width:0;
+    text-align:center;
+    text-shadow:0 0 1px #5c5c5c;
+    overflow: hidden;
+}
+
+nav>ul>li>div.selected{
+    width:auto;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//选择器样式
+////////////////////////////////////////////////////////////////////////////////
+
+#emotion_box{
+    margin:5px;
+}
+.emotion{
+    background:#f084a0;
+    font-size:11px;
+    border:0;
+    border-radius:5px;
+    display:inline-block;
+    margin:2px;
+    padding:2px 3px;
+    color:white;
+    transition: all 0.15s ease-in-out;
+}
+.emotion:hover{
+    background:#f26d90;
+}
+.emotion:active{
+    background:#eb74af;
+}
