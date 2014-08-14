@@ -185,7 +185,7 @@
                     "content": "٩(ŏ﹏ŏ、)۶"
                 }
             ],
-    "double":
+    "Double":
             [
                 {
                     "content": "( ´･･)ﾉ(._.`)"
@@ -219,10 +219,10 @@
                 },
                 {
                     "content": "ヽ(゜▽゜　)－C<(/;◇;)/~ ",
-		    "name": "拖走",
+		    "name": "拖走"
                 }
             ],
-    "sad cry":
+    "Sad":
             [
                 {
                     "content": "(๑•́ ₃•̀๑)  "
@@ -285,7 +285,7 @@
                     "content": "( ̤இॕ⌓இॕ ̤)"
                 }
             ],
-    "Funny than":
+    "Funny":
             [
                 {
                     "content": "(눈_눈)"
@@ -375,7 +375,7 @@
                     "content": "（；´д｀）"
                 }
             ],
-    "desk":
+    "Desk":
             [
                 {
                     "content": "┳━┳ノ( OωOノ)"
