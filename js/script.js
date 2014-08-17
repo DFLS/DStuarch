@@ -2,6 +2,7 @@ var windowIsShow = true;
 var gui = require('nw.gui');
 var clipboard = gui.Clipboard.get();
 var win = gui.Window.get();
+var menu = new gui.Menu();
 var emotionData;
 
 function switchWindow() {
@@ -33,7 +34,6 @@ shortcut.on('active', function() {
 
 //注册托盘图标
 
-var menu = new gui.Menu();
 menu.append(new gui.MenuItem({
     label: 'Exit',
     click: function() {
@@ -60,9 +60,35 @@ $.getJSON("list.json", function(data) {
 
 
 $(document).ready(function() {
+    $("#logo").on("dblclick", function() {
+        var win = gui.Window.open('about.html', {
+            position: 'center',
+            "toolbar": false,
+            "frame": false,
+            width: 337,
+            height: 452
+        });
+    });
+
     $("nav>ul>li").each(function() {
         $(this).html('<div>' + $(this).attr("groupID") + '</div>');
     });
+
+
+    $("#header_hotarea").on({
+        mouseenter: function() {
+            $("header>nav").addClass("selected");
+            $("header>nav").children("div").addClass("selected");
+        }
+    });
+
+    $("header").on({
+        mouseleave: function() {
+            $("header>nav").removeClass("selected");
+            $("header>nav").children("div").removeClass("selected");
+        }
+    });
+
 
     $("nav>ul>li").on({
         click: function() {
@@ -72,6 +98,10 @@ $(document).ready(function() {
             $(this).addClass("selected");
             var hueDegree = $("nav").find("li").index($(this)) * 60;
             parase.writeEmotions($(this).attr("groupID"));
+            $("header").css("background", $(this).css("background-color"));
+            var color = $(this).css("background-color").replace("rgb", "rgba");
+            var color = color.replace(")", ",0.2)");
+            $("header").css("box-shadow", "0 -3px 3px " + color);
             $("button,footer").css("-webkit-filter", "hue-rotate(" + hueDegree + "deg)");
         },
         mouseenter: function() {
