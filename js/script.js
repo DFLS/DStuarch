@@ -1,10 +1,3 @@
-var windowIsShow = true;
-var gui = require('nw.gui');
-var clipboard = gui.Clipboard.get();
-var win = gui.Window.get();
-var menu = new gui.Menu();
-var emotionData;
-
 function switchWindow() {
     if (windowIsShow) {
         win.hide();
@@ -60,14 +53,26 @@ $.getJSON("list.json", function(data) {
 
 
 $(document).ready(function() {
-    $("#logo").on("dblclick", function() {
-        var win = gui.Window.open('about.html', {
-            position: 'center',
-            "toolbar": false,
-            "frame": false,
-            width: 337,
-            height: 452
-        });
+    $("#logo").on({
+        "dblclick": function() {
+            gui.Window.open('about.html', {
+                position: 'center',
+                "toolbar": false,
+                "frame": false,
+                width: 337,
+                height: 452
+            });
+        },
+        "contextmenu": function() {
+            gui.Window.open('settings.html', {
+                position: 'center',
+                "toolbar": false,
+                "frame": false,
+                width: 475,
+                height: 535
+            });
+            win.close(true);
+        }
     });
 
     $("nav>ul>li").each(function() {

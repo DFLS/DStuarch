@@ -42,6 +42,7 @@ header #logo{
     background:url(../images/logo.png) no-repeat;
     background-size: 30px;
     position:fixed;
+    -webkit-app-region: no-drag;
 }
 
 #close{
