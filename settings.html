@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DStuarch Setting Panel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/method/fs.js" type="text/javascript"></script>
+        <script src="js/settings.js" type="text/javascript"></script>
+        <script src="js/initialization.js" type="text/javascript"></script>
+        <link href="styles/settings.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <i id="close_icon"></i>
+        <nav id="main_nav">
+            <ul>
+                <li id="base_setting" class="selected"><img src="./images/normal.svg" alt="base settings"></li>
+            </ul>
+        </nav>
+        <div id="setting_body">
+            <h2>快捷键设定</h2>
+            <span class="setting_title line_item">程序唤起快捷键</span>
+            <input id="shortcut" type="text"/>
+            <h2>功能设定</h2>
+            <label class="line_item"><input type="checkbox" id="anti_emoji">反Emoji解析【未实现】</label>
+            <p class="line_item introduction">开启此功能将防止聊天软降将颜文字解析为Emoji。实验性质功能，可能造成某些平台无法正确显示颜文字，虽然我不知道哪些平台会存在这个问题……</p>
+        </div>
+    </body>
+</html>
