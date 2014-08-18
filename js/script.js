@@ -64,6 +64,7 @@ $(document).ready(function() {
             });
         },
         "contextmenu": function() {
+            gui.App.unregisterGlobalHotKey(shortcut);
             gui.Window.open('settings.html', {
                 position: 'center',
                 "toolbar": false,
