@@ -11,7 +11,7 @@ function switchWindow() {
 
 //注册快捷键
 var option = {
-    key: "Alt+Q",
+    key: Stuarch.settingOptions.shortcut,
     active: function() {
         console.log("Global desktop keyboard shortcut: " + this.key + " active.");
     },
