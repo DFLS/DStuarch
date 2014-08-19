@@ -1,21 +1,24 @@
 var panel = {
-    readSettings: function() {
+    collectSettings: function() {
         Stuarch.settingOptions.shortcut = $("#shortcut").val();
-        Stuarch.settingOptions.antiEmoji = $("#anti_emoji").val();
+        Stuarch.settingOptions.antiEmoji = $("#anti_emoji").is(":checked");
+        Stuarch.writeSettingFile(false);
+    },
+    readSettings: function() {
+        $("#shortcut").val(Stuarch.settingOptions.shortcut);
+        if (Stuarch.settingOptions.antiEmoji)
+            $("#anti_emoji").attr("checked", "checked");
     }
 };
 
 $(document).ready(function() {
-    $("#shortcut").val(Stuarch.settingOptions.shortcut);
-    $("#anti_emoji").val(Stuarch.settingOptions.antiEmoji);
-
-
+    panel.readSettings();
     $("input[type='text']").on("blur", function() {
-        Stuarch.writeSettingFile();
+        panel.collectSettings();
     });
 
     $("input[type='radio'],input[type='checkbox']").on("change", function() {
-        Stuarch.writeSettingFile();
+        panel.collectSettings();
     });
 
     $("#close_icon").on("click", function() {

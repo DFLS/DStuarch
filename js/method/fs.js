@@ -15,9 +15,17 @@ var Stuarch = {
             this.writeSettingFile();
         }
     },
-    writeSettingFile: function() {
+    writeSettingFile: function(isDefault) {
+        var optObject;
+        isDefault = typeof (isDefault) == 'undefined' ? true : isDefault;
+        if (isDefault) {
+            optObject = this.defaultSettingOptions;
+        } else {
+            optObject = Stuarch.settingOptions;
+        }
         var SettingFileLocation = this.settingFilePath + this.settingFile;
-        var settingJSONString = JSON.stringify(this.defaultSettingOptions);
+        var settingJSONString = JSON.stringify(optObject);
+        console.log(optObject);
         fs.writeFileSync(SettingFileLocation, settingJSONString);
     }
 };
