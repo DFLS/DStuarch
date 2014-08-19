@@ -9,22 +9,6 @@ function switchWindow() {
     }
 }
 
-//注册快捷键
-var option = {
-    key: Stuarch.settingOptions.shortcut,
-    active: function() {
-        console.log("Global desktop keyboard shortcut: " + this.key + " active.");
-    },
-    failed: function(msg) {
-        console.log(msg);
-    }
-};
-var shortcut = new gui.Shortcut(option);
-gui.App.registerGlobalHotKey(shortcut);
-shortcut.on('active', function() {
-    switchWindow();
-});
-
 //注册托盘图标
 
 menu.append(new gui.MenuItem({
@@ -51,6 +35,7 @@ $.getJSON("list.json", function(data) {
     });
 });
 
+initialization.regActiveShortcut();
 
 $(document).ready(function() {
     $("#logo").on({
@@ -64,8 +49,8 @@ $(document).ready(function() {
             });
         },
         "contextmenu": function() {
-            gui.App.unregisterGlobalHotKey(shortcut);
-            gui.Window.open('settings.html', {
+            gui.App.unregisterGlobalHotKey(activeShortcut);
+            s = gui.Window.open('settings.html', {
                 position: 'center',
                 "toolbar": false,
                 "frame": false,
